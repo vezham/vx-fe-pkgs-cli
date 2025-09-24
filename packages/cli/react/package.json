@@ -1,0 +1,55 @@
+{
+  "name": "@vx-cli/react",
+  "version": "0.0.1",
+  "private": true,
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "vx-react": "./dist/cli.js"
+  },
+  "dependencies": {
+    "@nx/devkit": "21.4.1",
+    "tslib": "^2.3.0"
+  },
+  "executors": "./executors.json",
+  "generators": "./generators.json",
+  "nx": {
+    "targets": {
+      "build": {
+        "executor": "@nx/js:tsc",
+        "outputs": [
+          "{options.outputPath}"
+        ],
+        "options": {
+          "outputPath": "packages/cli/react/dist",
+          "main": "packages/cli/react/src/index.ts",
+          "tsConfig": "packages/cli/react/tsconfig.lib.json",
+          "rootDir": "packages/cli/react/src",
+          "generatePackageJson": false,
+          "assets": [
+            {
+              "input": "./packages/cli/react/src",
+              "glob": "**/!(*.ts)",
+              "output": "."
+            },
+            {
+              "input": "./packages/cli/react/src",
+              "glob": "**/*.d.ts",
+              "output": "."
+            }
+          ]
+        }
+      }
+    }
+  }
+}

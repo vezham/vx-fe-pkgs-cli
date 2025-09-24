@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "generators": {
+    "application": {
+      "factory": "./dist/generators/application/generator",
+      "schema": "./dist/generators/application/schema.json",
+      "description": "Create a custom React application",
+      "aliases": ["app"]
+    },
+    "common": {
+      "factory": "./dist/generators/common/generator",
+      "schema": "./dist/generators/common/schema.json",
+      "description": "Create a common React shared library"
+    },
+    "component": {
+      "factory": "./dist/generators/component/generator",
+      "schema": "./dist/generators/component/schema.json",
+      "description": "Create a reusable React component library",
+      "aliases": ["comp"]
+    },
+    "component-store": {
+      "factory": "./dist/generators/component-store/generator",
+      "schema": "./dist/generators/component-store/schema.json",
+      "description": "Create a component store library with atom ds",
+      "aliases": ["comp-store"]
+    },
+    "core": {
+      "factory": "./dist/generators/core/generator",
+      "schema": "./dist/generators/core/schema.json",
+      "description": "Create a core system logic library"
+    },
+    "hook": {
+      "factory": "./dist/generators/hook/generator",
+      "schema": "./dist/generators/hook/schema.json",
+      "description": "Create a custom React hooks library"
+    },
+    "layout": {
+      "factory": "./dist/generators/layout/generator",
+      "schema": "./dist/generators/layout/schema.json",
+      "description": "Create a layout components library"
+    },
+    "template": {
+      "factory": "./dist/generators/template/generator",
+      "schema": "./dist/generators/template/schema.json",
+      "description": "Create a template library for scaffolding"
+    },
+    "utilities": {
+      "factory": "./dist/generators/utilities/generator",
+      "schema": "./dist/generators/utilities/schema.json",
+      "description": "Create a utilities and helper functions library",
+      "aliases": ["utils"]
+    },
+    "init": {
+      "factory": "./dist/generators/init/generator",
+      "schema": "./dist/generators/init/schema.json",
+      "description": "Initialize VX CLI React generators in workspace"
+    },
+    "library": {
+      "factory": "./dist/generators/library/generator",
+      "schema": "./dist/generators/library/schema.json",
+      "description": "Create a custom React library",
+      "aliases": ["lib"]
+    }
+  }
+}

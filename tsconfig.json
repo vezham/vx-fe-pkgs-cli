@@ -16,6 +16,9 @@
     },
     {
       "path": "./apps_internals/playground"
+    },
+    {
+      "path": "./packages/cli/react"
     }
   ]
 }
