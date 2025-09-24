@@ -129,6 +129,20 @@
     "@vx-ci/build": {
       "command": "nx run-many -t build"
     },
+    "@vx-ci/nx:release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx run @vx:@vx-ci/build", "nx release -d"],
+        "parallel": false
+      }
+    },
+    "@vx-ws/release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["nx run @vx:@vx-ci/build", "tsx vx/tools/release.ts"],
+        "parallel": false
+      }
+    },
     "local-registry": {
       "executor": "@nx/js:verdaccio",
       "options": {
