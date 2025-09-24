@@ -29,11 +29,6 @@
     "importPath": {
       "type": "string",
       "description": "The library name used to import it, like @myorg/my-awesome-lib"
-    },
-    "storybook": {
-      "type": "boolean",
-      "default": true,
-      "description": "Generate Storybook configuration for component documentation"
     }
   },
   "required": ["name"]

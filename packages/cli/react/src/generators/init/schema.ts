@@ -1,3 +1,3 @@
-export interface InitGeneratorSchema {
+export interface GeneratorSchema {
   overrideDefaults?: boolean
 }

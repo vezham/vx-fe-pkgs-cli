@@ -10,9 +10,9 @@ import {
 } from '@nx/devkit'
 import * as path from 'path'
 
-import { LibraryGeneratorSchema } from './schema'
+import { GeneratorSchema } from './schema'
 
-interface NormalizedSchema extends LibraryGeneratorSchema {
+interface NormalizedSchema extends GeneratorSchema {
   projectName: string
   projectRoot: string
   projectDirectory: string
@@ -21,7 +21,7 @@ interface NormalizedSchema extends LibraryGeneratorSchema {
 
 function normalizeOptions(
   tree: Tree,
-  options: LibraryGeneratorSchema
+  options: GeneratorSchema
 ): NormalizedSchema {
   const name = names(options.name).fileName
   const projectDirectory = options.directory
@@ -74,7 +74,7 @@ function updateTsConfig(tree: Tree, options: NormalizedSchema) {
   })
 }
 
-export default async function (tree: Tree, options: LibraryGeneratorSchema) {
+export default async function (tree: Tree, options: GeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options)
 
   const targets: any = {

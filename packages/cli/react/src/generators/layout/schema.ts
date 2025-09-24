@@ -1,4 +1,4 @@
-export interface LayoutGeneratorSchema {
+export interface GeneratorSchema {
   name: string
   directory?: string
   tags?: string

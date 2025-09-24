@@ -10,9 +10,9 @@ import {
 } from '@nx/devkit'
 import * as path from 'path'
 
-import { ComponentGeneratorSchema } from './schema'
+import { GeneratorSchema } from './schema'
 
-interface NormalizedSchema extends ComponentGeneratorSchema {
+interface NormalizedSchema extends GeneratorSchema {
   projectName: string
   projectRoot: string
   projectDirectory: string
@@ -21,7 +21,7 @@ interface NormalizedSchema extends ComponentGeneratorSchema {
 
 function normalizeOptions(
   tree: Tree,
-  options: ComponentGeneratorSchema
+  options: GeneratorSchema
 ): NormalizedSchema {
   const name = names(options.name).fileName
   const projectDirectory = options.directory
@@ -74,7 +74,7 @@ function updateTsConfig(tree: Tree, options: NormalizedSchema) {
   })
 }
 
-export default async function (tree: Tree, options: ComponentGeneratorSchema) {
+export default async function (tree: Tree, options: GeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options)
 
   const targets: any = {
@@ -105,16 +105,6 @@ export default async function (tree: Tree, options: ComponentGeneratorSchema) {
       options: {
         config: `${normalizedOptions.projectRoot}/vite.config.ts`,
         passWithNoTests: true
-      }
-    }
-  }
-
-  if (options.storybook) {
-    targets.storybook = {
-      executor: '@storybook/angular:start-storybook',
-      options: {
-        port: 4400,
-        configDir: `${normalizedOptions.projectRoot}/.storybook`
       }
     }
   }

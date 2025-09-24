@@ -1,4 +1,4 @@
-export interface ApplicationGeneratorSchema {
+export interface GeneratorSchema {
   name: string
   directory?: string
   // tags?: string

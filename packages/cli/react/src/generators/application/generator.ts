@@ -9,9 +9,9 @@ import {
 import * as path from 'path'
 
 import { toPascalCase } from '../../utils/casing'
-import { ApplicationGeneratorSchema } from './schema'
+import { GeneratorSchema } from './schema'
 
-interface NormalizedSchema extends ApplicationGeneratorSchema {
+interface NormalizedSchema extends GeneratorSchema {
   projectName: string
   projectRoot: string
   projectDirectory: string
@@ -27,7 +27,7 @@ interface NormalizedSchema extends ApplicationGeneratorSchema {
 
 function normalizeOptions(
   tree: Tree,
-  options: ApplicationGeneratorSchema
+  options: GeneratorSchema
 ): NormalizedSchema {
   const name = names(options.name).fileName
   const category = options.category || 'apps'
@@ -295,10 +295,7 @@ function addMockProjectConfiguration(tree: Tree, options: NormalizedSchema) {
   })
 }
 
-export default async function (
-  tree: Tree,
-  options: ApplicationGeneratorSchema
-) {
+export default async function (tree: Tree, options: GeneratorSchema) {
   const normalizedOptions = normalizeOptions(tree, options)
   // console.log(normalizedOptions) // wjdlz/TODO: remove
 

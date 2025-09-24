@@ -1,12 +1,9 @@
 import { Tree, formatFiles } from '@nx/devkit'
 
 import { addGeneratorOverride, addPluginToNxJson } from '../../utils/nx-json'
+import { GeneratorSchema } from './schema'
 
-interface InitGeneratorSchema {
-  overrideDefaults?: boolean
-}
-
-export default async function (tree: Tree, options: InitGeneratorSchema) {
+export default async function (tree: Tree, options: GeneratorSchema) {
   // Add plugin to nx.json
   addPluginToNxJson(tree, '@vx-cli/react')
 

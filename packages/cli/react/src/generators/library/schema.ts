@@ -1,4 +1,4 @@
-export interface LibraryGeneratorSchema {
+export interface GeneratorSchema {
   name: string
   directory?: string
   tags?: string

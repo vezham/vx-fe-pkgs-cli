@@ -6,7 +6,7 @@
   "properties": {
     "overrideDefaults": {
       "type": "boolean",
-      "description": "Override default NX React generators",
+      "description": "Override default VX CLI React generators",
       "default": true
     }
   }
