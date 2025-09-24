@@ -187,21 +187,22 @@ const formatResponse = (
   const resourceType = getResourceType(apiUrl, data, isError)
   const isCollection = Array.isArray(data) && !isError
 
+  // eslint-disable-next-line
   type msg = {
     i18n_key: string
-    msg: string
+    message: string
   }
   // Generate appropriate message
   const getMessage = (): msg => {
     if (isError) {
       const errorMessages: Record<number | 'default', msg> = {
-        default: { i18n_key: 'unknown_error', msg: 'An error occurred' },
-        400: { i18n_key: '', msg: 'Invalid request data' },
-        401: { i18n_key: '', msg: 'Authentication required' },
-        403: { i18n_key: '', msg: 'Access forbidden' },
-        404: { i18n_key: 'bad_request', msg: 'Resource not found' }, // invalid url
-        429: { i18n_key: '', msg: 'Rate limit exceeded' },
-        500: { i18n_key: '', msg: 'Internal server error' }
+        default: { i18n_key: 'unknown_error', message: 'An error occurred' },
+        400: { i18n_key: '', message: 'Invalid request data' },
+        401: { i18n_key: '', message: 'Authentication required' },
+        403: { i18n_key: '', message: 'Access forbidden' },
+        404: { i18n_key: 'bad_request', message: 'Resource not found' }, // invalid url
+        429: { i18n_key: '', message: 'Rate limit exceeded' },
+        500: { i18n_key: '', message: 'Internal server error' }
       }
       return errorMessages[statusCode] || errorMessages.default
     }
@@ -209,17 +210,17 @@ const formatResponse = (
     const successMessages: Record<string | 'default', msg> = {
       default: {
         i18n_key: 'operation_success',
-        msg: 'Operation completed successfully'
+        message: 'Operation completed successfully'
       },
       'get-collection': {
         i18n_key: '',
-        msg: 'Resources retrieved successfully'
+        message: 'Resources retrieved successfully'
       },
-      get: { i18n_key: '', msg: 'Resource retrieved successfully' },
-      post: { i18n_key: '', msg: 'Resource created successfully' },
-      put: { i18n_key: '', msg: 'Resource updated successfully' },
-      patch: { i18n_key: '', msg: 'Resource updated successfully' },
-      delete: { i18n_key: '', msg: 'Resource deleted successfully' }
+      get: { i18n_key: '', message: 'Resource retrieved successfully' },
+      post: { i18n_key: '', message: 'Resource created successfully' },
+      put: { i18n_key: '', message: 'Resource updated successfully' },
+      patch: { i18n_key: '', message: 'Resource updated successfully' },
+      delete: { i18n_key: '', message: 'Resource deleted successfully' }
     }
 
     const key = method === 'get' && isCollection ? 'get-collection' : method
@@ -239,7 +240,7 @@ const formatResponse = (
       code: statusCode,
       status: statusCode >= 400 ? 'failed' : 'success',
       i18n_key: msg.i18n_key,
-      message: msg.msg,
+      message: msg.message,
       rate_limit: {
         remaining: rateLimit.remaining,
         reset_time: rateLimit.resetTime,

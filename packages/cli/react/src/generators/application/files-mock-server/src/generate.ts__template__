@@ -156,7 +156,7 @@ interface Settings {
 }
 
 // Generate users
-function generateUsers(count: number = 10): User[] {
+function generateUsers(count = 10): User[] {
   const users: User[] = []
   for (let i = 1; i <= count; i++) {
     users.push({
@@ -187,7 +187,7 @@ function generateUsers(count: number = 10): User[] {
 }
 
 // Generate posts
-function generatePosts(count: number = 25, userIds: number[]): Post[] {
+function generatePosts(count = 25, userIds: number[]): Post[] {
   const posts: Post[] = []
   const categories = [
     'Technology',
@@ -246,7 +246,7 @@ function generatePosts(count: number = 25, userIds: number[]): Post[] {
 
 // Generate comments
 function generateComments(
-  count: number = 50,
+  count = 50,
   postIds: number[],
   userIds: number[]
 ): Comment[] {
@@ -313,7 +313,7 @@ function generateCategories(): Category[] {
 }
 
 // Generate products (for e-commerce scenarios)
-function generateProducts(count: number = 20): Product[] {
+function generateProducts(count = 20): Product[] {
   const products: Product[] = []
   for (let i = 1; i <= count; i++) {
     products.push({
@@ -331,7 +331,7 @@ function generateProducts(count: number = 20): Product[] {
         faker.image.url({ width: 400, height: 400 })
       ],
       rating: parseFloat(
-        // @ts-ignore
+        // @ts-expect-error: Type 'number' is not assignable to type 'string'.
         faker.number.float({ min: 1, max: 5, fractionDigits: 1 })
       ),
       review_count: faker.number.int({ min: 0, max: 200 }),
@@ -349,7 +349,7 @@ function generateProducts(count: number = 20): Product[] {
 
 // Generate orders (for e-commerce scenarios)
 function generateOrders(
-  count: number = 30,
+  count = 30,
   userIds: number[],
   productIds: number[]
 ): Order[] {
