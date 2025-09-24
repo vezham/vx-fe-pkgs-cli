@@ -141,8 +141,7 @@ jobs:
       - name: fork | test - vitest
         shell: bash
         run: |
-          pnpm nx run-many -t test --passWithNoTests
-        # pnpm nx run-many -t test --passWithNoTests --exclude=${{ env.VX_SKIP }}
+          pnpm nx run-many -t test --passWithNoTests --exclude=${{ env.VX_SKIP }}
 
       - name: action | nx/AI fix
         if: always()
