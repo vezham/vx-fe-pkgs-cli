@@ -27,6 +27,7 @@ const NS = '[vezham] TOOLS/release'
       default: false
     })
     .option('firstRelease', {
+      alias: 'fr',
       description: 'firstRelease',
       type: 'boolean',
       default: false

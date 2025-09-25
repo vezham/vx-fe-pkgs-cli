@@ -11,6 +11,11 @@ on:
         type: string
         description: version to publish
         default: ''
+      args:
+        required: false
+        type: string
+        description: pass options to args
+        default: ''
   release:
     types: [published]
 
@@ -66,6 +71,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.VX_DEPLOYER_NPM }}
           NPM_PROVENANCE: false
           version: ${{ github.event.inputs.version }}
+          args: ${{ github.event.inputs.args }}
 
       - name: action | nx/AI fix
         if: always()
