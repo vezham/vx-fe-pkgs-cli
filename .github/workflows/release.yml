@@ -14,7 +14,7 @@ on:
       args:
         required: false
         type: string
-        description: pass options to args
+        description: options to args
         default: ''
   release:
     types: [published]
