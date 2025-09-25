@@ -1,0 +1,32 @@
+{
+  "name": "@vx-cli/react",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/cli/react/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/cli/react/dist",
+        "main": "packages/cli/react/src/index.ts",
+        "tsConfig": "packages/cli/react/tsconfig.lib.json",
+        "rootDir": "packages/cli/react/src",
+        "generatePackageJson": false,
+        "assets": [
+          {
+            "input": "./packages/cli/react/src",
+            "glob": "**/!(*.ts)",
+            "output": "."
+          },
+          {
+            "input": "./packages/cli/react/src",
+            "glob": "**/*.d.ts",
+            "output": "."
+          }
+        ]
+      }
+    }
+  }
+}

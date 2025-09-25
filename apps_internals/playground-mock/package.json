@@ -1,6 +1,7 @@
 {
   "name": "playground-mock",
   "version": "0.0.1",
+  "private": true,
   "description": "Mock API server for playground",
   "type": "module",
   "main": "dist/src/index.js",

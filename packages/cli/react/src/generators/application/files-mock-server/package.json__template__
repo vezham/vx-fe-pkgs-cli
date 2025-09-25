@@ -1,6 +1,7 @@
 {
   "name": "<%= mockProjectName %>",
   "version": "0.0.1",
+  "private": true,
   "description": "Mock API server for <%= projectName %>",
   "type": "module",
   "main": "dist/src/index.js",

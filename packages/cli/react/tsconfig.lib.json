@@ -10,11 +10,7 @@
     "moduleResolution": "nodenext",
     "types": ["node"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/generators/application/files-e2e-playwright/playwright.config.ts__template__",
-    "src/generators/application/files-e2e-playwright/src/app.test.ts__template__"
-  ],
+  "include": ["src/**/*.ts"],
   "references": [],
   "exclude": [
     "vite.config.ts",
