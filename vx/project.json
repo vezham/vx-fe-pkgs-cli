@@ -140,6 +140,7 @@
       "executor": "nx:run-commands",
       "options": {
         "commands": ["nx run @vx:@vx-ci/build", "tsx vx/tools/release.ts"],
+        "// commands": ["tsx vx/tools/release.ts -d --fr"],
         "parallel": false
       }
     },
