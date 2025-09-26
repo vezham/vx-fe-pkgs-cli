@@ -1,5 +1,6 @@
 import nx from '@nx/eslint-plugin'
 import tanstackQuery from '@tanstack/eslint-plugin-query'
+import jsoncParser from 'jsonc-eslint-parser'
 
 // import react from 'eslint-plugin-react'
 // import reactHooks from 'eslint-plugin-react-hooks'
@@ -20,7 +21,7 @@ export default [
     // Override or add rules here
     rules: {},
     languageOptions: {
-      parser: await import('jsonc-eslint-parser')
+      parser: jsoncParser
     }
   },
   ...nx.configs['flat/base'],
