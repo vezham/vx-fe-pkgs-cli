@@ -1,3 +1,17 @@
+## 0.1.1 (2025-09-26)
+
+### 📖 Documentation
+
+- Update commitlint rules and simplify React CLI README ([a846779](https://github.com/vezham/vx-fe-pkgs-cli/commit/a846779))
+
+### 🏡 Chore
+
+- update jsonc-eslint-parser and minor config improvements ([878dde9](https://github.com/vezham/vx-fe-pkgs-cli/commit/878dde9))
+
+### ❤️ Thank You
+
+- v0xvigneshwaran
+
 ## 0.1.0 (2025-09-25)
 
 ### 🚀 Features
