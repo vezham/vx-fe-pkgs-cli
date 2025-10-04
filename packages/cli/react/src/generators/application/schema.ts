@@ -2,7 +2,15 @@ export interface GeneratorSchema {
   name: string
   directory?: string
   // tags?: string
-  category?: 'app' | 'internal' | 'cdn' | 'pod' | 'suit' | 'platform' | 'widget'
+  category?:
+    | 'vezham'
+    | 'internal'
+    | 'app'
+    | 'cdn'
+    | 'pod'
+    | 'suit'
+    | 'platform'
+    | 'widget'
 
   // generic
   // style?: 'tailwind' | 'css'

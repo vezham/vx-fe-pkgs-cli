@@ -31,7 +31,13 @@ function normalizeOptions(
 ): NormalizedSchema {
   const name = names(options.name).fileName
   const category = options.category || 'apps'
-  const categoryPrefix = `apps${options.category == 'app' ? '' : `_${category}s`}`
+
+  let categoryPrefix = 'apps'
+  if (options.category != 'app') {
+    const suffix =
+      options.category == 'vezham' ? `_${category}` : `_${category}s`
+    categoryPrefix += suffix
+  }
 
   const projectDirectory = options.directory
     ? `${categoryPrefix}${names(options.directory).fileName}/${name}`

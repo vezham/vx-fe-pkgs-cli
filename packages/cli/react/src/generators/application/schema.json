@@ -17,7 +17,16 @@
       "type": "string",
       "description": "Application category that determines the project structure",
       "default": "internal",
-      "enum": ["cdn", "pod", "suit", "platform", "widget", "internal", "app"],
+      "enum": [
+        "cdn",
+        "pod",
+        "suit",
+        "platform",
+        "widget",
+        "internal",
+        "app",
+        "vezham"
+      ],
       "x-prompt": {
         "message": "Which category should this application belong to?",
         "type": "list",
@@ -40,7 +49,11 @@
             "value": "internal",
             "label": "Internal - Internal tools and utilities"
           },
-          { "value": "app", "label": "Apps - Standard applications" }
+          { "value": "app", "label": "Apps - Standard applications" },
+          {
+            "value": "vezham",
+            "label": "Vezham Apps - For Public from vezham.com"
+          }
         ]
       }
     },
@@ -61,5 +74,5 @@
       "default": true
     }
   },
-  "required": ["name"]
+  "required": ["name", "category"]
 }
