@@ -1,3 +1,13 @@
+## 0.1.2 (2025-10-07)
+
+### 🏡 Chore
+
+- Add 'vezham' category support to application generator ([3796074](https://github.com/vezham/vx-fe-pkgs-cli/commit/3796074))
+
+### ❤️ Thank You
+
+- v0xvigneshwaran
+
 ## 0.1.1 (2025-09-26)
 
 ### 📖 Documentation
