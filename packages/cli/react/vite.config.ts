@@ -1,5 +1,4 @@
 /// <reference types='vitest' />
-// @ts-expect-error: Module '"vite"' has no exported member 'defineConfig'.
 import { defineConfig } from 'vite'
 
 export default defineConfig(() => ({
