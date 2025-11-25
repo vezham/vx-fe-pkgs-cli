@@ -1,3 +1,46 @@
+## 0.2.0 (2025-11-25)
+
+### 🚀 Features
+
+- Add release workflow for automated publishing ([4c86475](https://github.com/vezham/vx-fe-pkgs-cli/commit/4c86475))
+- **cli:** add @vx-cli/react dependency and update nx.json ([d93707a](https://github.com/vezham/vx-fe-pkgs-cli/commit/d93707a))
+- **playground-mock:** mig to new VX ver, Introduce playground-mock and refactor mock server setup ([8e9afc3](https://github.com/vezham/vx-fe-pkgs-cli/commit/8e9afc3))
+
+### 🩹 Fixes
+
+- Update dependencies in pnpm-lock.yaml ([09f0602](https://github.com/vezham/vx-fe-pkgs-cli/commit/09f0602))
+- Remove unnecessary ts-expect-error in Vite config ([086da1c](https://github.com/vezham/vx-fe-pkgs-cli/commit/086da1c))
+- Update workflow actions to use post-ops and summary-qa ([284af7f](https://github.com/vezham/vx-fe-pkgs-cli/commit/284af7f))
+- Update build command in release workflow ([e4f2129](https://github.com/vezham/vx-fe-pkgs-cli/commit/e4f2129))
+
+### 🏡 Chore
+
+- Update workspace config, tooling, and release automation ([0bd276d](https://github.com/vezham/vx-fe-pkgs-cli/commit/0bd276d))
+- Update Tailwind CSS and related packages to 4.1.13 ([19c10c7](https://github.com/vezham/vx-fe-pkgs-cli/commit/19c10c7))
+- Upgrade Nx and related dependencies to 21.5.3 ([f90d78b](https://github.com/vezham/vx-fe-pkgs-cli/commit/f90d78b))
+- Update commitlint dependencies to v20 ([ecaa769](https://github.com/vezham/vx-fe-pkgs-cli/commit/ecaa769))
+- mig to @vezham 0.4.0-alpha.2 ([d4c0c97](https://github.com/vezham/vx-fe-pkgs-cli/commit/d4c0c97))
+- code review ([1f27ba7](https://github.com/vezham/vx-fe-pkgs-cli/commit/1f27ba7))
+- added license ([22f4143](https://github.com/vezham/vx-fe-pkgs-cli/commit/22f4143))
+- mig nx ver & linted ([573cf27](https://github.com/vezham/vx-fe-pkgs-cli/commit/573cf27))
+- Update docs and refactor release tool ([31b54c8](https://github.com/vezham/vx-fe-pkgs-cli/commit/31b54c8))
+- test label ([151e241](https://github.com/vezham/vx-fe-pkgs-cli/commit/151e241))
+- Add @vx-ci/build command to project config ([e401adf](https://github.com/vezham/vx-fe-pkgs-cli/commit/e401adf))
+- Add support for custom args in release workflow ([ca7150f](https://github.com/vezham/vx-fe-pkgs-cli/commit/ca7150f))
+- Update QA workflow branch patterns and step names ([89e9058](https://github.com/vezham/vx-fe-pkgs-cli/commit/89e9058))
+- refined steps labels ([bc74c03](https://github.com/vezham/vx-fe-pkgs-cli/commit/bc74c03))
+- Update release workflow step names and logic ([c3ce842](https://github.com/vezham/vx-fe-pkgs-cli/commit/c3ce842))
+
+### 🤖 CI
+
+- revised qa run-name ([77f7dd3](https://github.com/vezham/vx-fe-pkgs-cli/commit/77f7dd3))
+- Update QA workflow and cleanup project.json ([efd3d34](https://github.com/vezham/vx-fe-pkgs-cli/commit/efd3d34))
+
+### ❤️ Thank You
+
+- v0xvigneshwaran
+- vx-vigneshwaran
+
 ## 0.1.2 (2025-10-07)
 
 ### 🏡 Chore
