@@ -76,7 +76,7 @@ jobs:
         continue-on-error: false
         shell: bash
         run: |
-          pnpm nx run-many -t build || { echo "❌ Build failed"; exit 1; }
+          pnpm nx run @vx:@vx-ci/build || { echo "❌ Build failed"; exit 1; }
 
       - name: action | 📦 NX • NPM Release
         uses: vezham/vx-deployer/.github/actions/nx/release@timeline
