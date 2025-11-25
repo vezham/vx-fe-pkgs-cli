@@ -103,4 +103,5 @@ jobs:
           actor: ${{ env.ACTOR }}
           token: ${{ secrets.GITHUB_TOKEN }}
           version: ${{ github.event.inputs.version }}
+          args: ${{ github.event.inputs.args }}
           release_result: ${{ needs.release.result }}
