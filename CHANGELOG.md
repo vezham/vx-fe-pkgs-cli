@@ -1,3 +1,13 @@
+## 0.2.2 (2026-02-09)
+
+### 🩹 Fixes
+
+- Add repository info and include LICENSE ([2527b84](https://github.com/vezham/vx-fe-pkgs-cli/commit/2527b84))
+
+### ❤️ Thank You
+
+- vx-vigneshwaran
+
 ## 0.2.1 (2026-02-09)
 
 ### 🚀 Features
