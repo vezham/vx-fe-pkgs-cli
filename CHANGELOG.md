@@ -1,3 +1,18 @@
+## 0.2.1 (2026-02-09)
+
+### 🚀 Features
+
+- Add demo category and use workspace @vx-cli/react ([cbf16d6](https://github.com/vezham/vx-fe-pkgs-cli/commit/cbf16d6))
+
+### 🏡 Chore
+
+- Update vezham and vx-oss package versions ([1326f8c](https://github.com/vezham/vx-fe-pkgs-cli/commit/1326f8c))
+- Bump @vezham to beta and refresh pnpm lock ([89d8010](https://github.com/vezham/vx-fe-pkgs-cli/commit/89d8010))
+
+### ❤️ Thank You
+
+- vx-vigneshwaran
+
 ## 0.2.0 (2025-11-25)
 
 ### 🚀 Features
