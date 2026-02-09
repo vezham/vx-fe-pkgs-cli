@@ -1,6 +1,11 @@
 {
   "name": "@vx-cli/react",
   "version": "0.2.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vezham/vx-fe-pkgs-cli.git",
+    "directory": "packages/cli/react"
+  },
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -19,6 +24,7 @@
   "files": [
     "dist",
     "!**/*.tsbuildinfo",
+    "LICENSE",
     "executors.json",
     "generators.json"
   ],
