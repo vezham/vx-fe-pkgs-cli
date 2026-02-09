@@ -25,7 +25,8 @@
         "widget",
         "internal",
         "app",
-        "vezham"
+        "vezham",
+        "demo"
       ],
       "x-prompt": {
         "message": "Which category should this application belong to?",
@@ -53,6 +54,10 @@
           {
             "value": "vezham",
             "label": "Vezham Apps - For Public from vezham.com"
+          },
+          {
+            "value": "demo",
+            "label": "Demo Apps - Showcase & POC applications"
           }
         ]
       }

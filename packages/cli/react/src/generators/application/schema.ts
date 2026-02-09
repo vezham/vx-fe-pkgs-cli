@@ -4,6 +4,7 @@ export interface GeneratorSchema {
   // tags?: string
   category?:
     | 'vezham'
+    | 'demo'
     | 'internal'
     | 'app'
     | 'cdn'
