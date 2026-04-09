@@ -1,3 +1,17 @@
+## 0.3.0 (2026-04-09)
+
+### 🚀 Features
+
+- Add doc category and use workspace @vx-cli/react ([0d3f720](https://github.com/vezham/vx-fe-pkgs-cli/commit/0d3f720))
+
+### 🏡 Chore
+
+- Rename home component to Page ([0c8ef09](https://github.com/vezham/vx-fe-pkgs-cli/commit/0c8ef09))
+
+### ❤️ Thank You
+
+- vx-vigneshwaran
+
 ## 0.2.2 (2026-02-09)
 
 ### 🩹 Fixes
