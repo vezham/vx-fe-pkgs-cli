@@ -146,16 +146,19 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
 // }
 function addVxProjectConfiguration(tree: Tree, options: NormalizedSchema) {
   const targets: any = {}
-  targets['config-local-hostile'] = {
-    executor: 'nx:run-commands',
-    options: {
-      cwd: options.projectRoot,
-      commands: [
-        `sudo pnpm exec hostile set localhost ${options.projectName}.vezham.local && sudo pnpm exec hostile set localhost ${options.projectName}.mock.vezham.local`
-      ],
-      parallel: false
-    }
-  }
+  // targets['config-local-hostile'] = {
+  //   executor: 'nx:run-commands',
+  //   options: {
+  //     cwd: options.projectRoot,
+  //     commands: [
+  //       `sudo pnpm exec hostile set localhost ${options.projectName}.vezham.local && sudo pnpm exec hostile set localhost ${options.projectName}.mock.vezham.local`
+  //     ],
+  //     parallel: false
+  //   }
+  // }
+
+  targets['hosts:setup'] = {}
+  targets['routes:tanstack'] = {}
 
   addProjectConfiguration(tree, options.projectName, {
     root: options.projectRoot,
@@ -270,25 +273,31 @@ function addMockProjectConfiguration(tree: Tree, options: NormalizedSchema) {
   targets.serve = {
     executor: 'nx:run-commands',
     options: {
-      cwd: options.mockProjectRoot,
-      commands: ['pnpm serve'],
-      parallel: false
+      // cwd: options.mockProjectRoot,
+      // commands: ['pnpm serve'],
+      // parallel: false
+      cwd: '{projectRoot}',
+      command: 'pnpm serve'
     }
   }
   targets.build = {
     executor: 'nx:run-commands',
     options: {
-      cwd: options.mockProjectRoot,
-      commands: ['pnpm build'],
-      parallel: false
+      // cwd: options.mockProjectRoot,
+      // commands: ['pnpm build'],
+      // parallel: false
+      cwd: '{projectRoot}',
+      command: 'pnpm build'
     }
   }
   targets.generate = {
     executor: 'nx:run-commands',
     options: {
-      cwd: options.mockProjectRoot,
-      commands: ['pnpm generate'],
-      parallel: false
+      // cwd: options.mockProjectRoot,
+      // commands: ['pnpm generate'],
+      // parallel: false
+      cwd: '{projectRoot}',
+      command: 'pnpm generate'
     }
   }
 

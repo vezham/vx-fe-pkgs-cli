@@ -26,6 +26,7 @@
         "internal",
         "app",
         "vezham",
+        "doc",
         "demo"
       ],
       "x-prompt": {
@@ -54,6 +55,10 @@
           {
             "value": "vezham",
             "label": "Vezham Apps - For Public from vezham.com"
+          },
+          {
+            "value": "doc",
+            "label": "Doc Apps - Handbooks & roadmap, arch"
           },
           {
             "value": "demo",

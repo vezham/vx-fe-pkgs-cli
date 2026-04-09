@@ -5,6 +5,7 @@ export interface GeneratorSchema {
   category?:
     | 'vezham'
     | 'demo'
+    | 'doc'
     | 'internal'
     | 'app'
     | 'cdn'
