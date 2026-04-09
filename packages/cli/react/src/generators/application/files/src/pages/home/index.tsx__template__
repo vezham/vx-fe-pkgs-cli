@@ -1,5 +1,5 @@
-const app = () => {
+const Page = () => {
   return <div>Welcome to <%= projectLabel %>!...</div>
 }
 
-export default app
+export default Page
