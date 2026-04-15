@@ -1,3 +1,13 @@
+## 0.3.1 (2026-04-15)
+
+### 🏡 Chore
+
+- Add nx targets, update templates and aliases ([b83736c](https://github.com/vezham/vx-fe-pkgs-cli/commit/b83736c))
+
+### ❤️ Thank You
+
+- vx-vigneshwaran
+
 ## 0.3.0 (2026-04-09)
 
 ### 🚀 Features
